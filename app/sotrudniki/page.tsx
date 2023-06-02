@@ -1,21 +1,21 @@
-import Person from '@/components/Person/Person'
-import styles from './Sotrudniki.module.scss'
+import Person from '@/components/Person/Person';
+import styles from './Sotrudniki.module.scss';
 
 interface IPerson {
-  name: string
-  work: string
-  isCertified: boolean
-  description: string
-  exp: string
-  phone: string
-  email: string
-  image: any
+  name: string;
+  work: string;
+  isCertified: boolean;
+  description: string;
+  exp: string;
+  phone: string;
+  email: string;
+  image: any;
 }
 
 const Sotrudniki = async () => {
   const allPersons: IPerson[] = await fetch(
-    `${process.env.API}/api/persons`
-  ).then((res) => res.json())
+    `${process.env.NEXT_PUBLIC_API_URL}/api/persons`,
+  ).then((res) => res.json());
   return (
     <div className={styles.pageContainer}>
       <h2>Сотрудники</h2>
@@ -46,11 +46,11 @@ const Sotrudniki = async () => {
               image={person.image}
               key={person.name}
             />
-          )
+          );
         })}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Sotrudniki
+export default Sotrudniki;

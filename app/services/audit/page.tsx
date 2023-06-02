@@ -1,22 +1,22 @@
-import ServicePerson from '@/components/ServicePerson/ServicePerson'
-import styles from './auditPage.module.scss'
-import Image from 'next/image'
+import ServicePerson from '@/components/ServicePerson/ServicePerson';
+import styles from './auditPage.module.scss';
+import Image from 'next/image';
 
 interface IPerson {
-  name: string
-  work: string
-  isCertified: boolean
-  description: string
-  exp: string
-  phone: string
-  email: string
-  image: any
+  name: string;
+  work: string;
+  isCertified: boolean;
+  description: string;
+  exp: string;
+  phone: string;
+  email: string;
+  image: any;
 }
 
 const auditPage = async () => {
   const nikitenkov: IPerson[] = await fetch(
-    `${process.env.API}/api/persons?email=nikitenkov@anr.ru`
-  ).then((res) => res.json())
+    `${process.env.NEXT_PUBLIC_API_URL}/api/persons?email=nikitenkov@anr.ru`,
+  ).then((res) => res.json());
   return (
     <div className={styles.pageContainer}>
       <h2>Аудит</h2>
@@ -63,12 +63,12 @@ const auditPage = async () => {
           большое внимание уделяем вопросам налогообложения, что позволяет
           существенно снизить риски возникновения налоговых претензий у Клиента.
         </p>
-        <a href='https://anr.ru/storage/doc/sout%20ANR.PDF'>
+        <a href="https://anr.ru/storage/doc/sout%20ANR.PDF">
           Отчет о проведении специальной оценки условий труда Закрытого
           акционерного общества «Ассоциация «Налоги России»
         </a>
         <br />
-        <a href='https://anr.ru/storage/doc/sout%20Metaudit.PDF'>
+        <a href="https://anr.ru/storage/doc/sout%20Metaudit.PDF">
           Отчет о проведении специальной оценки условий труда ООО
           &quot;Метаудит&quot;
         </a>
@@ -202,7 +202,7 @@ const auditPage = async () => {
           отчетности согласно требованиям российского законодательства является
           обязательным для организаций, со ссылкой на соответствующий
           нормативный документ, приведен в следующей{' '}
-          <a href='https://minfin.gov.ru/ru/document/?id_4=126466#_ftn1'>
+          <a href="https://minfin.gov.ru/ru/document/?id_4=126466#_ftn1">
             таблице
           </a>
           .
@@ -230,7 +230,7 @@ const auditPage = async () => {
         </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default auditPage
+export default auditPage;
