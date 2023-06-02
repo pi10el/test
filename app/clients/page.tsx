@@ -1,3 +1,4 @@
+import { getURL } from '@/utils/getURL';
 import styles from './ClientsPage.module.scss';
 
 interface IAllClicents {
@@ -5,9 +6,10 @@ interface IAllClicents {
   clients: string[];
 }
 const ClientsPage = async () => {
-  const allClients: IAllClicents[] = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/clients`,
-  ).then((res) => res.json());
+  const allClients: IAllClicents[] = await fetch(getURL('/clients')).then(
+    (res) => res.json(),
+  );
+
   return (
     <div className={styles.pageContainer}>
       <h2>Клиенты</h2>

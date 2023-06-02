@@ -1,6 +1,7 @@
 import ServicePerson from '@/components/ServicePerson/ServicePerson';
 import styles from './auditPage.module.scss';
 import Image from 'next/image';
+import { getURL } from '@/utils/getURL';
 
 interface IPerson {
   name: string;
@@ -15,7 +16,7 @@ interface IPerson {
 
 const auditPage = async () => {
   const nikitenkov: IPerson[] = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/persons?email=nikitenkov@anr.ru`,
+    getURL('/persons?email=nikitenkov@anr.ru'),
   ).then((res) => res.json());
   return (
     <div className={styles.pageContainer}>

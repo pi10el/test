@@ -1,5 +1,6 @@
 import Person from '@/components/Person/Person';
 import styles from './Sotrudniki.module.scss';
+import { getURL } from '@/utils/getURL';
 
 interface IPerson {
   name: string;
@@ -13,9 +14,9 @@ interface IPerson {
 }
 
 const Sotrudniki = async () => {
-  const allPersons: IPerson[] = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/persons`,
-  ).then((res) => res.json());
+  const allPersons: IPerson[] = await fetch(getURL('/persons')).then((res) =>
+    res.json(),
+  );
   return (
     <div className={styles.pageContainer}>
       <h2>Сотрудники</h2>
