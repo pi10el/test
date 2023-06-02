@@ -11,5 +11,5 @@ export async function GET(req: Request) {
     );
   }
 
-  return NextResponse.json(currentPersons);
+  return NextResponse.json(JSON.stringify(currentPersons));
 }
