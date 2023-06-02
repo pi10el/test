@@ -1,0 +1,23 @@
+.mainInfo {
+    @apply flex items-start flex-col border-b border-slate-400 mb-4 flex-wrap;
+    p {
+        @apply text-xs
+    }
+    h3 {
+        @apply text-sm font-semibold
+    }
+}
+
+.container {
+    @apply w-[500px] border p-5 bg-sky-100 rounded-sm min-h-[450px] mx-1 mb-2 min-w-[325px] shadow-md
+}
+
+.image {
+    @apply float-right rounded-sm ml-2
+}
+
+.description {
+    p {
+        @apply text-sm my-1
+    }
+}

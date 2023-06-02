@@ -1,0 +1,27 @@
+.title {
+    @apply text-2xl font-semibold text-gray-600 flex items-center flex-col mb-5;
+    @media (max-width: 750px) {
+        @apply text-base text-center
+    }
+}
+
+.pageContent {
+    @apply font-semibold;
+    @media (max-width: 750px) {
+        @apply text-sm  
+    }
+}
+
+.slideContainer {
+    @apply flex justify-center items-center px-[50px] py-[125px];
+    @media(max-width: 750px) {
+        @apply px-1
+    };
+    @media(max-width: 400px) {
+        @apply pb-[50px]
+    }
+}
+
+.newsLink {
+    @apply text-sky-500 underline
+}

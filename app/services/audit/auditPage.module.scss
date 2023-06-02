@@ -1,0 +1,25 @@
+.pageContainer {
+    .paragraph {
+        @apply my-4
+    }
+    a {
+        @apply text-sky-500 underline
+    }
+}
+
+.pageBlock {
+    @apply mt-10;
+    .outsideUl {
+        @apply block list-disc;
+        li {
+            @apply list-inside my-3
+        }
+    }
+}
+
+.insideUl {
+    @apply list-decimal block;
+    li {
+        @apply pl-5 mb-1;
+    }
+}

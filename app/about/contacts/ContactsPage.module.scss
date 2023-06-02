@@ -1,0 +1,13 @@
+.pageContainer {
+    @apply w-full;
+    p {
+        @apply my-4;
+        span {
+            @apply font-semibold
+        }
+    }
+}
+
+.map {
+    @apply w-full h-[500px] rounded-md shadow-md border
+}

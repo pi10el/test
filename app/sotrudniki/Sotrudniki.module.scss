@@ -1,0 +1,9 @@
+.pageContainer {
+    .paragraph {
+        @apply my-4
+    }
+}
+
+.personsContainer {
+    @apply mt-[50px] flex flex-row items-start flex-wrap justify-center
+}

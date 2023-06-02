@@ -1,0 +1,22 @@
+.pageContainer {
+    p {
+        @apply my-4
+    }
+}
+
+.clientContainer {
+    @apply w-[275px] mx-3 mb-[50px];
+    span {
+        @apply font-semibold text-lg
+    }
+    ul {
+        @apply text-sm mt-4;
+        li {
+            @apply mt-2
+        }   
+    }
+}
+
+.listContainer {
+    @apply flex flex-row flex-wrap items-start justify-start
+}

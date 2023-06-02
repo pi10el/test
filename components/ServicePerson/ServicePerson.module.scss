@@ -1,0 +1,15 @@
+.personContainer {
+    @apply flex flex-row justify-start items-start p-2 bg-sky-100 rounded-sm;
+    img {
+        @apply mr-5 rounded-sm float-left
+    }
+    p {
+        @apply mb-1;
+        @media(max-width: 750px) {
+             @apply text-center
+    }
+    }
+    @media(max-width: 750px) {
+        @apply flex-col justify-center items-center
+    }
+}
